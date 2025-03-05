@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детокс от цифрового шума</title>
+</head>
+<body>
+    <h1>Пройди тест: зависим ли ты от цифровых технологий?</h1>
+    <form method="POST">
+        {% for question in questions %}
+            <p>{{ question.text }}</p>
+            <input type="radio" name="q{{ loop.index0 }}" value="yes" required> Да
+            <input type="radio" name="q{{ loop.index0 }}" value="no" required> Нет
+        {% endfor %}
+        <br><br>
+        <button type="submit">Получить результат</button>
+    </form>
+</body>
+</html>
