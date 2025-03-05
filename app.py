@@ -22,4 +22,4 @@ def index(): #Обработка главной страницы
         return render_template("result.html", result=result_text) #Вывод результата пользователю
     return render_template("index.html", questions=questions)
 if __name__ == "__main__": #Код работает только если запустить файл напрямую
-    app.run(debug=True) #Вывод ошибок если будут
+    app.run(host="0.0.0.0", port=5000) #Вывод ошибок если будут
